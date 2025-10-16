@@ -1,9 +1,9 @@
 # Capstone Proposal
 
 **Course:** Building AI-Powered Applications  
-**Team Name:** [Your Team Name]  
-**Project Title:** [Your Project Title]  
-**Date:** [Submission Date]
+**Team Name:** [SYNTAX SYNDICATE]  
+**Project Title:** [Project in AI]  
+**Date:** [10/16/2025]
 
 ---
 
@@ -45,12 +45,12 @@
 
 ### Primary User Persona
 
-**User Type:** [e.g., Undergraduate students, small business owners, content creators]
+**User Type:** [Undergraduate students, small business owners, content creators]
 
 **Demographics:**
-- Age range: [e.g., 18-24]
-- Technical proficiency: [e.g., Comfortable with web apps, but not developers]
-- Context of use: [e.g., Mobile-first, using during commute]
+- Age range: [18-24]
+- Technical proficiency: [Comfortable with web apps, but not developers]
+- Context of use: [Mobile-first, using during commute]
 
 **User Needs:**
 1. **Need #1:** [Specific need]
@@ -109,10 +109,10 @@
 ### Technical Success Criteria
 
 **Minimum viable performance:**
-- Response latency: [e.g., <3 seconds p95]
-- Availability: [e.g., 95% uptime during testing period]
-- Error rate: [e.g., <5% of requests fail]
-- Cost per user: [e.g., <$X per session]
+- Response latency: [<3 seconds p95]
+- Availability: [95% uptime during testing period]
+- Error rate: [<5% of requests fail]
+- Cost per user: [<$X per session]
 
 ---
 
@@ -120,15 +120,15 @@
 
 **What each team member wants to learn:**
 
-**[Team Member 1]:**
+**[Beka Tkhilaishvili]:**
 - [Specific skill/technology 1]
 - [Specific skill/technology 2]
 
-**[Team Member 2]:**
+**[Daviti Matiashvili]:**
 - [Specific skill/technology 1]
 - [Specific skill/technology 2]
 
-**[Team Member 3]:** (if applicable)
+**[Aleksandre Pluzhnikovi]:** (if applicable)
 - [Specific skill/technology 1]
 - [Specific skill/technology 2]
 
@@ -173,30 +173,30 @@
 ### Technology Stack
 
 **Frontend:**
-- Framework: [e.g., Next.js 14, React, vanilla JS]
-- Key libraries: [e.g., TailwindCSS, Recharts]
-- Hosting: [e.g., Vercel, Netlify]
+- Framework: [ Next.js 14, React, vanilla JS]
+- Key libraries: [TailwindCSS, Recharts]
+- Hosting: [Vercel, Netlify]
 
 **Backend:**
-- Framework: [e.g., FastAPI, Flask, Express]
-- Language: [e.g., Python 3.11, TypeScript]
-- Hosting: [e.g., Render, Railway, local]
+- Framework: [FastAPI, Flask, Express]
+- Language: [Python 3.11, TypeScript]
+- Hosting: [Render, Railway, local]
 
 **AI/ML Services:**
-- Primary model: [e.g., GPT-4o, Claude Sonnet 3.5]
-- Fallback model: [e.g., GPT-3.5-turbo]
-- Other AI services: [e.g., OpenAI Embeddings, Whisper, DALL-E 3]
+- Primary model: [GPT-4o, Claude Sonnet 3.5]
+- Fallback model: [GPT-3.5-turbo]
+- Other AI services: [OpenAI Embeddings, Whisper, DALL-E 3]
 
 **Data Storage:**
-- Database: [e.g., PostgreSQL, SQLite]
-- Vector store: [e.g., FAISS, Pinecone, pgvector]
-- Object storage: [e.g., Cloudinary, S3]
+- Database: [PostgreSQL, SQLite]
+- Vector store: [FAISS, Pinecone, pgvector]
+- Object storage: [Cloudinary, S3]
 
 **DevOps/Tooling:**
 - Version control: GitHub
-- CI/CD: [e.g., GitHub Actions, none yet]
-- Monitoring: [e.g., Sentry, custom logging]
-- Testing: [e.g., pytest, Jest]
+- CI/CD: [GitHub Actions, none yet]
+- Monitoring: [Sentry, custom logging]
+- Testing: [pytest, Jest]
 
 ---
 
@@ -229,15 +229,15 @@
 ### AI Integration Details
 
 **Model Selection:**
-- **Primary use case:** [e.g., Text generation, classification, embedding]
-- **Model choice:** [e.g., GPT-4o]
-- **Why this model:** [e.g., Good balance of quality and cost, supports streaming]
+- **Primary use case:** [Text generation, classification, embedding]
+- **Model choice:** [GPT-4o]
+- **Why this model:** [Good balance of quality and cost, supports streaming]
 
 **Prompt Strategy:**
 - Template: [Describe your prompt structure]
-- Context length: [e.g., Max 4000 tokens]
-- Temperature: [e.g., 0.7 for creative, 0 for factual]
-- Safety: [e.g., System prompt includes "do not provide medical advice"]
+- Context length: [Max 4000 tokens]
+- Temperature: [0.7 for creative, 0 for factual]
+- Safety: [System prompt includes "do not provide medical advice"]
 
 **Example Prompt:**
 ```
@@ -255,10 +255,10 @@ Answer:
 ```
 
 **Retrieval Strategy (if applicable):**
-- Chunking: [e.g., 500 tokens with 50 token overlap]
-- Embedding model: [e.g., text-embedding-3-small]
-- Similarity metric: [e.g., cosine similarity]
-- Top-k: [e.g., 5 most relevant chunks]
+- Chunking: [500 tokens with 50 token overlap]
+- Embedding model: [text-embedding-3-small]
+- Similarity metric: [cosine similarity]
+- Top-k: [5 most relevant chunks]
 - Reranking: [Yes/No, and method]
 
 ---
@@ -272,9 +272,9 @@ Answer:
 | [Service 3] | [Purpose] | [Cost] | [Limits] |
 
 **API Keys & Secrets:**
-- [ ] All keys stored in `.env` (not committed to git)
-- [ ] `.env.example` provided for team members
-- [ ] Keys rotated if accidentally exposed
+- [x] All keys stored in `.env` (not committed to git)
+- [x] `.env.example` provided for team members
+- [x] Keys rotated if accidentally exposed
 
 ---
 
@@ -282,22 +282,22 @@ Answer:
 
 ### Technical Risks
 
-**Risk #1: [e.g., API Rate Limits]**
+**Risk #1: [API Rate Limits]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Implement request queuing]
-  - [Strategy 2: e.g., Add fallback to cached responses]
-  - [Strategy 3: e.g., Monitor usage and alert at 80% threshold]
+  - [Strategy 1: Implement request queuing]
+  - [Strategy 2: Add fallback to cached responses]
+  - [Strategy 3: Monitor usage and alert at 80% threshold]
 
-**Risk #2: [e.g., LLM Output Quality]**
+**Risk #2: [LLM Output Quality]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
   - [Strategy 1]
   - [Strategy 2]
 
-**Risk #3: [e.g., Response Latency]**
+**Risk #3: [Response Latency]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
@@ -308,75 +308,75 @@ Answer:
 
 ### Product Risks
 
-**Risk #1: [e.g., Users Don't Find It Useful]**
+**Risk #1: [Users Don't Find It Useful]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., User interviews in Week 3]
-  - [Strategy 2: e.g., Prototype testing before building full app]
+  - [Strategy 1: User interviews in Week 3]
+  - [Strategy 2: Prototype testing before building full app]
 
-**Risk #2: [e.g., Scope Creep]**
+**Risk #2: [Scope Creep]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Strict feature freeze after Week 8]
-  - [Strategy 2: e.g., Weekly scope reviews]
+  - [Strategy 1: Strict feature freeze after Week 8]
+  - [Strategy 2: Weekly scope reviews]
 
 ---
 
 ### Team Risks
 
-**Risk #1: [e.g., Unequal Workload Distribution]**
+**Risk #1: [Unequal Workload Distribution]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Weekly standup with task review]
-  - [Strategy 2: e.g., Track contributions in GitHub + peer evaluations]
+  - [Strategy 1: Weekly standup with task review]
+  - [Strategy 2: Track contributions in GitHub + peer evaluations]
 
-**Risk #2: [e.g., Team Member Availability]**
+**Risk #2: [Team Member Availability]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Buffer time in schedule]
-  - [Strategy 2: e.g., Cross-training on critical components]
+  - [Strategy 1: Buffer time in schedule]
+  - [Strategy 2: Cross-training on critical components]
 
 ---
 
 ### Safety & Ethical Risks
 
-**Risk #1: [e.g., Prompt Injection Attacks]**
+**Risk #1: [Prompt Injection Attacks]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Input sanitization]
-  - [Strategy 2: e.g., Separate user content from system prompts]
+  - [Strategy 1: Input sanitization]
+  - [Strategy 2: Separate user content from system prompts]
 
-**Risk #2: [e.g., Bias in AI Outputs]**
+**Risk #2: [Bias in AI Outputs]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Test with diverse user inputs]
-  - [Strategy 2: e.g., Include disclaimer about AI limitations]
+  - [Strategy 1: Test with diverse user inputs]
+  - [Strategy 2: Include disclaimer about AI limitations]
 
-**Risk #3: [e.g., Privacy/Data Leakage]**
+**Risk #3: [Privacy/Data Leakage]**
 - Likelihood: [High/Medium/Low]
 - Impact: [High/Medium/Low]
 - Mitigation:
-  - [Strategy 1: e.g., Don't store PII]
-  - [Strategy 2: e.g., Anonymize all user data]
+  - [Strategy 1: Don't store PII]
+  - [Strategy 2: Anonymize all user data]
 
 ---
 
 ### Contingency Plans
 
 **If our primary model is unavailable:**
-- [Fallback plan, e.g., switch to GPT-3.5-turbo with degraded quality notice]
+- [Fallback plan, switch to GPT-3.5-turbo with degraded quality notice]
 
 **If we can't recruit enough user testers:**
-- [Alternative plan, e.g., synthetic evaluation with golden dataset]
+- [Alternative plan, synthetic evaluation with golden dataset]
 
 **If we fall behind schedule:**
-- [Plan to cut scope, e.g., drop features X and Y, focus on core flow]
+- [Plan to cut scope, drop features X and Y, focus on core flow]
 
 ---
 
@@ -385,25 +385,25 @@ Answer:
 ### What We Need to Learn
 
 **Technical Questions:**
-1. [e.g., How do we implement streaming responses in FastAPI?]
-   - Resources: [e.g., FastAPI docs, LangChain streaming examples]
+1. [How do we implement streaming responses in FastAPI?]
+   - Resources: [FastAPI docs, LangChain streaming examples]
    - Timeline: Week 3
 
-2. [e.g., What's the best way to chunk documents for RAG?]
-   - Resources: [e.g., LlamaIndex docs, research papers on RAG]
+2. [What's the best way to chunk documents for RAG?]
+   - Resources: [LlamaIndex docs, research papers on RAG]
    - Timeline: Week 5
 
-3. [e.g., How do we prevent prompt injection?]
-   - Resources: [e.g., OWASP Top 10 for LLMs, prompt engineering guides]
+3. [How do we prevent prompt injection?]
+   - Resources: [OWASP Top 10 for LLMs, prompt engineering guides]
    - Timeline: Week 6
 
 **Product Questions:**
-1. [e.g., Do users prefer concise or detailed responses?]
-   - Method: [e.g., A/B test in Week 7]
+1. [Do users prefer concise or detailed responses?]
+   - Method: [A/B test in Week 7]
    - Timeline: Week 7-8
 
-2. [e.g., What error messages are most helpful?]
-   - Method: [e.g., User observation during testing]
+2. [What error messages are most helpful?]
+   - Method: [User observation during testing]
    - Timeline: Week 9
 
 ---
@@ -411,24 +411,24 @@ Answer:
 ### Experiments & Prototypes
 
 **Week 3-4: Proof of Concept**
-- Goal: [e.g., Can we get a basic query → LLM → response working?]
-- Success criteria: [e.g., End-to-end flow works with <5s latency]
-- What we'll learn: [e.g., Basic API integration, prompt patterns]
+- Goal: [Can we get a basic query → LLM → response working?]
+- Success criteria: [End-to-end flow works with <5s latency]
+- What we'll learn: [Basic API integration, prompt patterns]
 
 **Week 5-6: Retrieval Integration**
-- Goal: [e.g., Add RAG with citations]
-- Success criteria: [e.g., Responses include relevant context 80% of time]
-- What we'll learn: [e.g., Chunking strategies, embedding quality]
+- Goal: [Add RAG with citations]
+- Success criteria: [Responses include relevant context 80% of time]
+- What we'll learn: [Chunking strategies, embedding quality]
 
 **Week 7-8: User Testing Round 1**
-- Goal: [e.g., Get feedback on core flow]
-- Success criteria: [e.g., 3+ users complete test tasks]
-- What we'll learn: [e.g., UX pain points, feature priorities]
+- Goal: [Get feedback on core flow]
+- Success criteria: [3+ users complete test tasks]
+- What we'll learn: [UX pain points, feature priorities]
 
 **Week 11-12: Evaluation & Optimization**
-- Goal: [e.g., Reduce cost and latency]
-- Success criteria: [e.g., Hit target <$0.10 per query, <3s latency]
-- What we'll learn: [e.g., Caching strategies, prompt optimization]
+- Goal: [Reduce cost and latency]
+- Success criteria: [Hit target <$0.10 per query, <3s latency]
+- What we'll learn: Caching strategies, prompt optimization]
 
 ---
 
@@ -452,29 +452,29 @@ Answer:
 
 **Do we need IRB approval?**
 - [ ] Yes - we're collecting sensitive data or working with minors
-- [ ] No - but we've completed the IRB Light Checklist (see `docs/irb-checklist.md`)
+- [x] No - but we've completed the IRB Light Checklist (see `docs/irb-checklist.md`)
 
 **Data we'll collect:**
-- [Type of data, e.g., Task completion times, user feedback, screen recordings]
-- [How long we'll store it, e.g., Until end of semester, then delete]
-- [Who has access, e.g., Only team members]
+- [Type of data, Task completion times, user feedback, screen recordings]
+- [How long we'll store it, Until end of semester, then delete]
+- [Who has access, Only team members]
 
 **User consent:**
-- [ ] We've adapted the course consent template
-- [ ] Users can withdraw at any time
-- [ ] We've explained data usage clearly
+- [x] We've adapted the course consent template
+- [x] Users can withdraw at any time
+- [x] We've explained data usage clearly
 
 ---
 
 ### Recruitment Plan
 
 **Target participants:**
-- Number: [e.g., 5-8 users per testing round]
-- Criteria: [e.g., Must be students, no prior experience with similar tools]
-- Where we'll find them: [e.g., CS department, study groups, social media]
+- Number: [5-8 users per testing round]
+- Criteria: [Must be students, no prior experience with similar tools]
+- Where we'll find them: [CS department, study groups, social media]
 
 **Compensation:**
-- [e.g., Coffee gift card, pizza, acknowledgment in final presentation]
+- [Coffee gift card, pizza, acknowledgment in final presentation]
 
 **Timeline:**
 - Week 3-4: Recruit first batch (3-5 users)
@@ -499,9 +499,9 @@ Answer:
    - [Question about expectations]
 
 3. **Task 1: [Specific task] (10 min)**
-   - Scenario: [e.g., "You need to find information about..."]
-   - Success: [e.g., User completes task with AI assistant]
-   - Observe: [e.g., Time, errors, confusion points]
+   - Scenario: ["You need to find information about..."]
+   - Success: [User completes task with AI assistant]
+   - Observe: [Time, errors, confusion points]
 
 4. **Task 2: [Specific task] (10 min)**
    - [Similar structure]
@@ -525,11 +525,11 @@ Answer:
 
 ### Data Collection Methods
 
-- [ ] Screen recording (with permission)
-- [ ] Observer notes
-- [ ] Task completion metrics (time, success rate)
-- [ ] Post-session survey
-- [ ] System logs (latency, errors, costs)
+- [x] Screen recording (with permission)
+- [x] Observer notes
+- [x] Task completion metrics (time, success rate)
+- [x] Post-session survey
+- [x] System logs (latency, errors, costs)
 
 **Where data will be stored:**
 - Raw notes/recordings: [e.g., Password-protected Google Drive folder]
@@ -585,7 +585,7 @@ Answer:
 ### Major Milestones
 
 **✅ Milestone 1: Proposal (Week 2)** - YOU ARE HERE
-- Submission: [Date]
+- Submission: [10/16/2025]
 - Points: 10
 
 **🎯 Milestone 2: Design Review (Week 4)**
@@ -634,24 +634,24 @@ Answer:
 ### Cost Estimates
 
 **AI API Costs:**
-- Development & testing: [e.g., $50/month × 3 months = $150]
-- User testing: [e.g., $30 for ~300 test sessions]
-- Safety margin: [e.g., $50]
+- Development & testing: [$50/month × 3 months = $150]
+- User testing: [$30 for ~300 test sessions]
+- Safety margin: [$50]
 - **Total AI costs: ~$230**
 
 **Other Services:**
-- [e.g., Vector DB hosting: $0 (free tier)]
-- [e.g., App hosting: $0 (free tier)]
-- [e.g., Domain name: $0 (use .vercel.app or .netlify.app)]
+- [Vector DB hosting: $0 (free tier)]
+- [App hosting: $0 (free tier)]
+- [Domain name: $0 (use .vercel.app or .netlify.app)]
 
 **User compensation:**
-- [e.g., 8 users × $10 gift card = $80]
+- [8 users × $10 gift card = $80]
 
 **TOTAL PROJECT COST: ~$310**
 
 **Who pays:**
-- [e.g., Split equally: ~$103 per team member]
-- OR [e.g., Apply for course/department funding]
+- [Split equally: ~$103 per team member]
+- OR [Apply for course/department funding]
 
 ---
 
@@ -660,16 +660,16 @@ Answer:
 **Time:**
 - Total: ~15 weeks
 - Accounting for midterms, finals: ~12 effective weeks
-- Team capacity: [X] hours/week × [Y] team members = [Z] total hours
+- Team capacity: [4] hours/week × [3] team members = [12] total hours
 
 **Compute:**
-- Development machines: [e.g., Laptops sufficient for most work]
-- GPU needs: [e.g., None - using cloud APIs]
-- Storage: [e.g., <1GB for database, fits free tier]
+- Development machines: [Laptops sufficient for most work]
+- GPU needs: [None - using cloud APIs]
+- Storage: [<1GB for database, fits free tier]
 
 **Access:**
-- API keys: [e.g., Each team member has own OpenAI account]
-- Shared resources: [e.g., Team account for vector DB]
+- API keys: [Each team member has own OpenAI account]
+- Shared resources: [Team account for vector DB]
 
 ---
 
@@ -696,7 +696,7 @@ See [docs/team-contract.md](./team-contract.md) for full details.
 
 | Date | Author | Changes |
 |------|--------|---------|
-| [Date] | [Name] | Initial draft |
+| [10/16/2025] | [Beka Tkhilaishvili] | Initial draft |
 | [Date] | [Name] | Added architecture diagram |
 | [Date] | All | Final review and approval |
 
