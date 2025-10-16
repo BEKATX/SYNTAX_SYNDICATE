@@ -2,7 +2,7 @@
 
 **Course:** Building AI-Powered Applications  
 **Team Name:** [Syntax Syndicate]  
-**Project:** [Your Project Title]  
+**Project:** [Project in AI]  
 **Date:** [10/10/20205]
 
 ---
@@ -20,12 +20,12 @@
 ## Team Mission & Goals
 
 **Our Mission:**  
-[1-2 sentences describing what you want to achieve together]
+[We want to successfully complete this course and learn new thing for our future. We want to take part in craeting something new.]
 
 **Our Goals for This Semester:**  
-1. [Specific, measurable goal 1]  
-2. [Specific, measurable goal 2]  
-3. [Specific, measurable goal 3]
+1. [Successfully complete course]  
+2. [Learn using AI in creating applications]  
+3. [Add our creation in portfollio]
 
 ---
 
@@ -88,7 +88,7 @@ All team members are equally responsible for:
 - [ ] [Add other norms]
 
 **If Someone Can't Attend:**
-- Notify team at least [X] hours in advance
+- Notify team at least 2 hours in advance
 - Review meeting notes within 24 hours
 - Complete any assigned action items
 
@@ -110,38 +110,38 @@ All team members are equally responsible for:
 - [x] Update documentation for significant changes
 
 **Task Management:**  
-- Platform: [e.g., GitHub Issues, Trello, Notion]
-- Task Assignment: [e.g., Self-assign during meetings, rotated by lead]
-- Status Updates: [e.g., Daily standups in Slack, weekly syncs]
+- Platform: [GitHub Issues, Trello, Notion]
+- Task Assignment: [Self-assign during meetings, rotated by lead]
+- Status Updates: [Daily standups in Slack, weekly syncs]
 
 ### Contribution Tracking
 
 We will track contributions through:
-- [ ] GitHub commit history and PR contributions
-- [ ] Task completion in [project management tool]
-- [ ] Weekly progress reports (rotating responsibility)
-- [ ] Peer evaluation forms (mid-term and final)
+- [x] GitHub commit history and PR contributions
+- [x] Task completion in [project management tool]
+- [x] Weekly progress reports (rotating responsibility)
+- [x] Peer evaluation forms (mid-term and final)
 
 **Expected Contribution:**  
-Each team member should contribute approximately [X] hours per week.
+Each team member should contribute approximately 6 hours per week.
 
 ---
 
 ## Decision-Making Process
 
 ### Routine Decisions
-- Method: [e.g., Majority vote, consensus, assigned owner decides]
+- Method: [Majority vote, consensus, assigned owner decides]
 - Timeline: [e.g., Decided within 24 hours]
 
 ### Major Decisions
-- Method: [e.g., Unanimous agreement required, or 2/3 majority with 24-hour notice]
-- Timeline: [e.g., Discuss in team meeting, decide within one week]
-- Documentation: [e.g., Record in decision-log.md file]
+- Method: [Unanimous agreement required, or 2/3 majority with 24-hour notice]
+- Timeline: [Discuss in team meeting, decide within one week]
+- Documentation: [Record in decision-log.md file]
 
 ### If We Can't Agree:
-1. [e.g., Take 24 hours to research and present arguments]
-2. [e.g., Vote with majority rule]
-3. [e.g., If still stuck, consult instructor]
+1. [Take 24 hours to research and present arguments]
+2. [Vote with majority rule]
+3. [If still stuck, consult instructor]
 
 ---
 
@@ -167,39 +167,39 @@ Each team member should contribute approximately [X] hours per week.
 ### Common Issues & Agreed Solutions
 
 **If someone misses a deadline:**  
-- [e.g., Team checks in 24 hours before deadline to catch issues early]
-- [e.g., Missing member makes up work within 48 hours or next task is reassigned]
+- [Team checks in 24 hours before deadline to catch issues early]
+- [Missing member makes up work within 48 hours or next task is reassigned]
 
 **If someone isn't responding to communications:**  
-- [e.g., After 48 hours, escalate to emergency contact or instructor]
+- [After 48 hours, escalate to emergency contact or instructor]
 
 **If workload feels unequal:**  
-- [e.g., Review contribution logs at weekly meeting, rebalance if needed]
+- [Review contribution logs at weekly meeting, rebalance if needed]
 
 **If technical disagreement arises:**  
-- [e.g., Prototype both approaches, test, then decide based on metrics]
+- [Prototype both approaches, test, then decide based on metrics]
 
 ---
 
 ## Quality Standards
 
 ### Code Quality
-- [ ] Follows [language] style guide (e.g., PEP 8 for Python, Airbnb for JS)
-- [ ] Includes docstrings/comments for complex logic
-- [ ] Passes linting checks
-- [ ] Has unit tests for core functionality
+- [x] Follows python style guide (e.g., PEP 8 for Python, Airbnb for JS)
+- [x] Includes docstrings/comments for complex logic
+- [x] Passes linting checks
+- [x] Has unit tests for core functionality
 
 ### Documentation Quality
-- [ ] README is always up-to-date
-- [ ] Setup instructions are clear and tested
-- [ ] API endpoints are documented
-- [ ] Architecture decisions are recorded
+- [x] README is always up-to-date
+- [x] Setup instructions are clear and tested
+- [x] API endpoints are documented
+- [x] Architecture decisions are recorded
 
 ### UX/Product Quality
-- [ ] Features are user-tested before marking complete
-- [ ] Error messages are clear and helpful
-- [ ] Loading states and feedback are implemented
-- [ ] Accessibility basics are covered (color contrast, keyboard nav)
+- [x] Features are user-tested before marking complete
+- [x] Error messages are clear and helpful
+- [x] Loading states and feedback are implemented
+- [x] Accessibility basics are covered (color contrast, keyboard nav)
 
 ---
 
@@ -250,34 +250,34 @@ Each team member should contribute approximately [X] hours per week.
 We will consider this project successful if:
 
 **Team Health:**  
-- [ ] All team members feel heard and respected
-- [ ] Conflicts are resolved constructively
-- [ ] Workload is distributed fairly
-- [ ] We enjoy working together
+- [x] All team members feel heard and respected
+- [x] Conflicts are resolved constructively
+- [x] Workload is distributed fairly
+- [x] We enjoy working together
 
 **Project Outcomes:**  
-- [ ] We ship a working product by Week 15
-- [ ] We meet all major milestone deadlines
-- [ ] Our code is maintainable and documented
-- [ ] Users find our product valuable
+- [x] We ship a working product by Week 15
+- [x] We meet all major milestone deadlines
+- [x] Our code is maintainable and documented
+- [x] Users find our product valuable
 
 **Learning Goals:**  
-- [ ] Everyone learns new technical skills
-- [ ] We all contribute meaningfully
-- [ ] We can articulate our technical decisions
-- [ ] We're proud to show this in our portfolios
+- [x] Everyone learns new technical skills
+- [x] We all contribute meaningfully
+- [x] We can articulate our technical decisions
+- [x] We're proud to show this in our portfolios
 
 ---
 
 ## Amendments
 
 This contract can be amended with:
-- [ ] Unanimous agreement of all team members
-- [ ] Documentation of what changed and why
-- [ ] Updated version committed to repo with new date
+- [x] Unanimous agreement of all team members
+- [x] Documentation of what changed and why
+- [x] Updated version committed to repo with new date
 
 **Amendment History:**  
-- [Date]: [Brief description of change]
+- [10/16/2025]: [Filled up everything neccessary for proposal]
 
 ---
 
@@ -286,7 +286,7 @@ This contract can be amended with:
 By signing below, we agree to uphold this contract and work together professionally and respectfully.
 
 **[Team Member 1 Name]**  
-Signature: ___________________________  Date: _______________
+Signature: Beka Tkhilaishvili  Date: 10/16/2025
 
 **[Team Member 2 Name]**  
 Signature: ___________________________  Date: _______________
@@ -303,7 +303,7 @@ If signing digitally, each team member should:
 2. Add the date
 3. Commit this file with a commit message: "Sign team contract - [Your Name]"
 
-- **[Name]** agreed on [Date]
+- **[Beka Tkhilaishvili]** agreed on [10/16/2025]
 - **[Name]** agreed on [Date]
 - **[Name]** agreed on [Date]
 
