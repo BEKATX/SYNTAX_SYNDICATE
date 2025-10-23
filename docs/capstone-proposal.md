@@ -1,9 +1,9 @@
 # Capstone Proposal
 
-**Course:** Building AI-Powered Applications  
-**Team Name:** [SYNTAX SYNDICATE]  
-**Project Title:** [Project in AI]  
-**Date:** [10/16/2025]
+**Course:** Building AI-Powered Applications
+**Team Name:** SYNTAX SYNDICATE
+**Project Title:** Cognify
+**Date:** October 21, 2025
 
 ---
 
@@ -11,33 +11,27 @@
 
 ### The Problem
 
-[2-3 paragraphs describing the problem you're solving]
+Many university and high school students struggle with the overwhelming volume of information they need to process for their courses. They are faced with dense textbook chapters, lengthy academic articles, and hours of recorded lectures. The critical process of converting this raw material into effective study aids—such as summaries, practice questions, and glossaries—is a manual, time-consuming, and cognitively demanding task that often gets skipped due to time constraints.
 
-**Questions to answer:**
-- What specific problem are you addressing?
-- Who currently experiences this problem?
-- What are the current solutions (if any) and why are they inadequate?
-- Why does this problem matter?
-- What makes this problem suitable for an AI-powered solution?
+Currently, students use a patchwork of inadequate solutions. They might manually re-write notes, a process that is slow and doesn't guarantee comprehension. Others use multiple, disconnected online tools: a website for summarizing, another for making flashcards, and perhaps a general-purpose chatbot for asking questions. This approach is fragmented, inefficient, and fails to create a cohesive study experience for a specific piece of content.
 
-**Example Structure:**
-"Many students struggle with [specific problem]. Currently, they [how they deal with it now], which leads to [negative outcomes]. This problem affects [number/type of people] and costs them [time/money/frustration]. An AI-powered solution could [how AI specifically helps] by [concrete mechanism]."
+This problem matters because ineffective studying leads directly to lower comprehension, higher stress levels, and ultimately, poorer academic outcomes. It's a significant barrier to learning. An AI-powered solution is perfectly suited to address this by automating the most laborious parts of study preparation. AI can analyze large volumes of text to synthesize key ideas, identify important terminology, and generate relevant questions, freeing students to focus on what truly matters: active learning and self-assessment.
 
 ---
 
 ### Scope
 
 **What's In Scope:**
-- [Feature/capability 1]
-- [Feature/capability 2]
-- [Feature/capability 3]
+- **Feature/capability 1:** Ingestion of user content via three methods: pasted text, PDF document upload, and audio file upload (for lecture transcription).
+- **Feature/capability 2:** Generation of three core AI-powered study aids: a concise summary, an interactive practice quiz, and a glossary of key terms with definitions.
+- **Feature/capability 3:** A complete, single-page web application that provides a seamless user experience, including a tabbed interface to view generated content and the ability to export the full study guide to a formatted PDF.
 
 **What's Out of Scope (but maybe future work):**
-- [Thing you won't do 1]
-- [Thing you won't do 2]
+- **Thing you won't do 1:** User accounts and cloud-based storage. Session data will only be saved in the user's local browser storage.
+- **Thing you won't do 2:** Real-time collaboration, sharing features, or support for video file inputs.
 
 **Why This Scope Makes Sense:**
-[1-2 sentences justifying your chosen scope for a semester project]
+This scope is designed to deliver a complete and valuable end-to-end user journey within a single semester. It prioritizes perfecting the core AI-driven workflow over peripheral features like authentication, which can be added in the future.
 
 ---
 
@@ -45,36 +39,35 @@
 
 ### Primary User Persona
 
-**User Type:** [Undergraduate students, small business owners, content creators]
+**User Type:** University and High School Students
 
 **Demographics:**
-- Age range: [18-24]
-- Technical proficiency: [Comfortable with web apps, but not developers]
-- Context of use: [Mobile-first, using during commute]
+- **Age range:** 18-24
+- **Technical proficiency:** High. Comfortable with modern web apps, but not developers.
+- **Context of use:** Late-night study sessions on a laptop; quick reviews on a mobile device between classes.
 
 **User Needs:**
-1. **Need #1:** [Specific need]
-   - Why it matters: [Impact on user]
-   - Current workaround: [What they do now]
+1.  **Need #1:** To quickly understand the main points of a long document or lecture.
+    - **Why it matters:** It saves critical study time and reduces anxiety before an exam.
+    - **Current workaround:** Manually skimming chapters, re-reading paragraphs multiple times, or giving up and not reading the material at all.
 
-2. **Need #2:** [Specific need]
-   - Why it matters: [Impact on user]
-   - Current workaround: [What they do now]
+2.  **Need #2:** To actively test their knowledge of the material, not just passively review it.
+    - **Why it matters:** Active recall is a scientifically proven method for stronger memory retention.
+    - **Current workaround:** Manually creating their own flashcards (which is tedious), or searching for generic online quizzes that don't match their specific course content.
 
-3. **Need #3:** [Specific need]
-   - Why it matters: [Impact on user]
-   - Current workaround: [What they do now]
+3.  **Need #3:** To have all study materials for a specific topic organized in one accessible place.
+    - **Why it matters:** It reduces the mental clutter of managing multiple files and links, making final exam review far more efficient.
+    - **Current workaround:** A disorganized collection of downloaded PDFs, Google Docs for notes, and browser bookmarks.
 
 **User Pain Points:**
-- [Specific frustration 1]
-- [Specific frustration 2]
-- [Specific frustration 3]
+- "I have a 30-page PDF to read for tomorrow and no time to get through it all."
+- "I don't know what's important enough to be on the exam."
+- "Making my own flashcards and practice questions takes forever."
 
 ---
 
 ### Secondary Users (Optional)
-
-[If applicable, describe other types of users who might interact with your system]
+- **Lifelong Learners & Professionals:** Individuals studying for professional certifications who need to digest dense technical manuals and self-test their understanding.
 
 ---
 
@@ -84,197 +77,108 @@
 
 **How we'll know our solution works:**
 
-1. **Metric #1:** [e.g., Task completion time]
-   - Target: [e.g., Reduce from 10 minutes to <2 minutes]
-   - Measurement method: [e.g., Time users from task start to completion]
+1.  **Metric #1:** Task completion time
+    - **Target:** A first-time user can successfully generate at least one study aid in under 3 minutes.
+    - **Measurement method:** Time users from landing on the page to seeing their first generated output during usability testing.
 
-2. **Metric #2:** [e.g., Accuracy/Quality]
-   - Target: [e.g., 90% of outputs rated "helpful" or "very helpful" by users]
-   - Measurement method: [e.g., Post-task survey with 5-point scale]
+2.  **Metric #2:** Output Quality
+    - **Target:** At least 80% of users in a study rate the generated Quiz and Summary as a 4 or 5 on a 5-point usefulness scale.
+    - **Measurement method:** Post-task survey administered during user testing sessions.
 
-3. **Metric #3:** [e.g., User satisfaction]
-   - Target: [e.g., NPS score >50, or 4/5 average rating]
-   - Measurement method: [e.g., Exit survey]
+3.  **Metric #3:** Feature Engagement
+    - **Target:** At least 60% of test users voluntarily use more than one of the core AI features (e.g., Summary and Quiz) on a single document.
+    - **Measurement method:** Observation during user testing sessions.
 
-4. **Metric #4:** [e.g., Adoption/Engagement]
-   - Target: [e.g., 5 active users with 3+ sessions each]
-   - Measurement method: [e.g., Usage analytics]
-
-5. **Metric #5:** [e.g., Cost efficiency]
-   - Target: [e.g., <$0.10 per user interaction]
-   - Measurement method: [e.g., API cost tracking]
-
----
+4.  **Metric #4:** Performance
+    - **Target:** The average end-to-end processing time for a standard 5-page PDF or 5-minute audio file is under 90 seconds.
+    - **Measurement method:** Logging the time from API request to response on the backend.
 
 ### Technical Success Criteria
 
 **Minimum viable performance:**
-- Response latency: [<3 seconds p95]
-- Availability: [95% uptime during testing period]
-- Error rate: [<5% of requests fail]
-- Cost per user: [<$X per session]
-
----
+- **Response latency:** p95 latency for AI generation endpoints under 15 seconds for standard inputs.
+- **Availability:** 99% uptime during the final two weeks of the semester.
+- **Error rate:** <5% of API requests fail during user testing sessions.
 
 ### Learning Goals
 
 **What each team member wants to learn:**
 
-**[Beka Tkhilaishvili]:**
-- [Specific skill/technology 1]
-- [Specific skill/technology 2]
-
-**[Daviti Matiashvili]:**
-- [Specific skill/technology 1]
-- [Specific skill/technology 2]
-
-**[Aleksandre Pluzhnikovi]:** (if applicable)
-- [Specific skill/technology 1]
-- [Specific skill/technology 2]
+**Beka Tkhilaishvili:**
+- Master state management in complex React applications using hooks.
+- Learn best practices for building responsive, mobile-first web designs with CSS.
+**Daviti Matiashvili:**
+- Gain proficiency in designing and deploying RESTful APIs with FastAPI.
+- Understand the full lifecycle of a full-stack application from development to deployment.
+**Aleksandre Pluzhnikovi:**
+- Learn to effectively integrate and manage multiple Hugging Face models within a single application.
+- Understand the performance trade-offs (speed vs. quality) of different AI models.
 
 ---
 
 ## 4. Technical Architecture
 
 ### System Overview
-
-[1-2 paragraph high-level description of how your system works]
-
-**Example:**
-"Our system consists of a Next.js frontend that captures user input, sends it to a FastAPI backend, which orchestrates calls to OpenAI's GPT-4 API and a Pinecone vector database for retrieval. Results are streamed back to the user with citations."
-
----
+Cognify is a full-stack web application with a decoupled architecture. The frontend is a single-page application built in React.js that handles all user interactions. It communicates via a REST API with a Python-based backend powered by FastAPI. The backend is responsible for all business logic, file processing, and orchestrating calls to our AI Core, which is a collection of pre-trained NLP models from libraries like Hugging Face Transformers and spaCy.
 
 ### Architecture Diagram
-
-[Insert diagram here - use draw.io, Excalidraw, Mermaid, or similar]
-
-```
-[Paste ASCII diagram or link to image file]
-```
-
-**Example:**
-```
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   User      │─────▶│   Frontend  │─────▶│   Backend   │
-│  (Browser)  │◀─────│  (Next.js)  │◀─────│  (FastAPI)  │
-└─────────────┘      └─────────────┘      └─────────────┘
-                                                  │
-                                     ┌────────────┼────────────┐
-                                     ▼            ▼            ▼
-                              ┌──────────┐ ┌──────────┐ ┌──────────┐
-                              │ OpenAI   │ │ Pinecone │ │PostgreSQL│
-                              │   API    │ │  Vector  │ │   DB     │
-                              └──────────┘ └──────────┘ └──────────┘
-```
-
----
++------------------+ +----------------------+ +---------------------------+
+| User's Browser   | | Backend Server | | AI Model Services |
+| (React Frontend) | | (FastAPI)      | | (Python) |
++------------------+ +----------------------+ +---------------------------+
+| | |
+| 1. Upload PDF/Audio | |
+|-------------------------> | POST /api/upload/... |
+| | |
+| | 2. Extract/Transcribe Text |
+| <-------------------------| 200 OK { text: "..." } |
+| | |
+| 3. Click "Quiz Me" | |
+|-------------------------> | POST /api/generate-quiz |
+| | |
+| | 4. Call AI Core Quizzer |
+| |--------------------------------> | [Question Gen Model] |
+| | |
+| <-------------------------| 200 OK { quiz: [...] } |
+| | |
+| 5. Display Quiz in UI | |
 
 ### Technology Stack
 
 **Frontend:**
-- Framework: [ Next.js 14, React, vanilla JS]
-- Key libraries: [TailwindCSS, Recharts]
-- Hosting: [Vercel, Netlify]
+- **Framework:** React.js (with Hooks)
+- **Key libraries:** JavaScript (ES6+), CSS3
+- **Hosting:** Vercel
 
 **Backend:**
-- Framework: [FastAPI, Flask, Express]
-- Language: [Python 3.11, TypeScript]
-- Hosting: [Render, Railway, local]
+- **Framework:** FastAPI
+- **Language:** Python 3.11+
+- **Hosting:** Render
 
 **AI/ML Services:**
-- Primary model: [GPT-4o, Claude Sonnet 3.5]
-- Fallback model: [GPT-3.5-turbo]
-- Other AI services: [OpenAI Embeddings, Whisper, DALL-E 3]
+- **Primary model(s):** Hugging Face Transformers for Summarization (`distilbart-cnn-12-6`) and Question Generation (`t5-base-qg-hl`).
+- **Other AI services:** OpenAI Whisper for transcription, spaCy for Named Entity Recognition.
 
 **Data Storage:**
-- Database: [PostgreSQL, SQLite]
-- Vector store: [FAISS, Pinecone, pgvector]
-- Object storage: [Cloudinary, S3]
-
-**DevOps/Tooling:**
-- Version control: GitHub
-- CI/CD: [GitHub Actions, none yet]
-- Monitoring: [Sentry, custom logging]
-- Testing: [pytest, Jest]
-
----
+- **Database:** None for V1.0.
+- **Vector store:** None for V1.0.
+- **Session Storage:** Browser Local Storage.
 
 ### Data Flow
 
-**Example Flow: User Query → AI Response**
+**Flow: User Uploads PDF -> Generates Quiz**
 
-1. User enters query in frontend
-2. Frontend validates input and shows loading state
-3. Request sent to `/api/query` endpoint
-4. Backend:
-   - Sanitizes input (check for prompt injection)
-   - Generates embedding of query
-   - Searches vector DB for relevant context (top 5 results)
-   - Constructs prompt with retrieved context
-   - Calls OpenAI API with prompt
-   - Streams response back to frontend
-   - Logs latency, cost, and user feedback
-5. Frontend displays response with citations
-
-**Critical Path Latency Budget:**
-- Frontend validation: <100ms
-- Backend processing: <500ms
-- Vector search: <300ms
-- LLM generation: <3000ms
-- **Total target: <4 seconds**
-
----
-
-### AI Integration Details
-
-**Model Selection:**
-- **Primary use case:** [Text generation, classification, embedding]
-- **Model choice:** [GPT-4o]
-- **Why this model:** [Good balance of quality and cost, supports streaming]
-
-**Prompt Strategy:**
-- Template: [Describe your prompt structure]
-- Context length: [Max 4000 tokens]
-- Temperature: [0.7 for creative, 0 for factual]
-- Safety: [System prompt includes "do not provide medical advice"]
-
-**Example Prompt:**
-```
-System: You are an expert assistant for [domain]. 
-You help users by [specific task]. 
-Always cite sources when using retrieved information.
-Never provide [forbidden content].
-
-Context from knowledge base:
-{retrieved_chunks}
-
-User question: {user_query}
-
-Answer:
-```
-
-**Retrieval Strategy (if applicable):**
-- Chunking: [500 tokens with 50 token overlap]
-- Embedding model: [text-embedding-3-small]
-- Similarity metric: [cosine similarity]
-- Top-k: [5 most relevant chunks]
-- Reranking: [Yes/No, and method]
-
----
-
-### Third-Party Services & APIs
-
-| Service | Purpose | Cost | Rate Limits |
-|---------|---------|------|-------------|
-| OpenAI API | Text generation | ~$0.03/1K tokens | 10K RPM tier 1 |
-| [Service 2] | [Purpose] | [Cost] | [Limits] |
-| [Service 3] | [Purpose] | [Cost] | [Limits] |
-
-**API Keys & Secrets:**
-- [x] All keys stored in `.env` (not committed to git)
-- [x] `.env.example` provided for team members
-- [x] Keys rotated if accidentally exposed
+1.  User clicks "Upload PDF" on the React frontend.
+2.  Frontend sends the file via a `POST` request to the `/api/upload-pdf` endpoint.
+3.  FastAPI backend receives the file, uses `PyMuPDF` to extract text.
+4.  Backend sends the extracted text back to the frontend in a JSON response.
+5.  Frontend displays the text in a textarea for user review.
+6.  User clicks "Quiz Me".
+7.  Frontend sends the reviewed text in a `POST` request to `/api/generate-quiz`.
+8.  Backend calls the AI Core's `generate_questions` function.
+9.  The function loads the T5 model and generates a list of questions.
+10. Backend returns the list of questions to the frontend.
+11. Frontend displays the interactive quiz in the UI.
 
 ---
 
@@ -282,101 +186,30 @@ Answer:
 
 ### Technical Risks
 
-**Risk #1: [API Rate Limits]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Implement request queuing]
-  - [Strategy 2: Add fallback to cached responses]
-  - [Strategy 3: Monitor usage and alert at 80% threshold]
-
-**Risk #2: [LLM Output Quality]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1]
-  - [Strategy 2]
-
-**Risk #3: [Response Latency]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1]
-  - [Strategy 2]
-
----
+- **Risk #1: Low-quality AI outputs** (e.g., inaccurate summaries, nonsensical questions)
+  - **Likelihood:** Medium, **Impact:** High
+  - **Mitigation:** 1. Research and benchmark multiple pre-trained models before selection. 2. Always allow the user to review and edit all generated content.
+- **Risk #2: High latency from AI models**
+  - **Likelihood:** High, **Impact:** Medium
+  - **Mitigation:** 1. Enforce strict input size limits to manage processing time. 2. Implement clear loading indicators in the UI to manage user expectations.
 
 ### Product Risks
 
-**Risk #1: [Users Don't Find It Useful]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: User interviews in Week 3]
-  - [Strategy 2: Prototype testing before building full app]
-
-**Risk #2: [Scope Creep]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Strict feature freeze after Week 8]
-  - [Strategy 2: Weekly scope reviews]
-
----
+- **Risk #1: Users don't find the tool significantly better than their current methods.**
+  - **Likelihood:** Medium, **Impact:** High
+  - **Mitigation:** 1. Conduct early user interviews (Week 3-4) to validate pain points. 2. Focus on a seamless, integrated workflow, which is our key differentiator.
 
 ### Team Risks
 
-**Risk #1: [Unequal Workload Distribution]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Weekly standup with task review]
-  - [Strategy 2: Track contributions in GitHub + peer evaluations]
-
-**Risk #2: [Team Member Availability]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Buffer time in schedule]
-  - [Strategy 2: Cross-training on critical components]
-
----
+- **Risk #1: Unequal workload distribution.**
+  - **Likelihood:** Medium, **Impact:** Medium
+  - **Mitigation:** 1. Use GitHub Issues to make work visible and track progress. 2. Review task distribution at each weekly meeting.
 
 ### Safety & Ethical Risks
 
-**Risk #1: [Prompt Injection Attacks]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Input sanitization]
-  - [Strategy 2: Separate user content from system prompts]
-
-**Risk #2: [Bias in AI Outputs]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Test with diverse user inputs]
-  - [Strategy 2: Include disclaimer about AI limitations]
-
-**Risk #3: [Privacy/Data Leakage]**
-- Likelihood: [High/Medium/Low]
-- Impact: [High/Medium/Low]
-- Mitigation:
-  - [Strategy 1: Don't store PII]
-  - [Strategy 2: Anonymize all user data]
-
----
-
-### Contingency Plans
-
-**If our primary model is unavailable:**
-- [Fallback plan, switch to GPT-3.5-turbo with degraded quality notice]
-
-**If we can't recruit enough user testers:**
-- [Alternative plan, synthetic evaluation with golden dataset]
-
-**If we fall behind schedule:**
-- [Plan to cut scope, drop features X and Y, focus on core flow]
+- **Risk #1: Misinformation from AI outputs.**
+  - **Likelihood:** Medium, **Impact:** Medium
+  - **Mitigation:** 1. Add a clear disclaimer in the UI stating that AI-generated content may contain errors and should be verified. 2. Use reputable, well-documented models.
 
 ---
 
@@ -385,64 +218,23 @@ Answer:
 ### What We Need to Learn
 
 **Technical Questions:**
-1. [How do we implement streaming responses in FastAPI?]
-   - Resources: [FastAPI docs, LangChain streaming examples]
-   - Timeline: Week 3
+1.  **Question:** What are the best pre-trained models on Hugging Face that balance quality and inference speed for our summarization and quiz generation tasks?
+    - **Resources:** Hugging Face Hub, academic papers on text generation.
+    - **Timeline:** Weeks 3-4
 
-2. [What's the best way to chunk documents for RAG?]
-   - Resources: [LlamaIndex docs, research papers on RAG]
-   - Timeline: Week 5
-
-3. [How do we prevent prompt injection?]
-   - Resources: [OWASP Top 10 for LLMs, prompt engineering guides]
-   - Timeline: Week 6
+2.  **Question:** How can we reliably access word-level confidence scores from the Whisper transcription model to implement the review feature?
+    - **Resources:** Whisper model documentation, open-source projects using Whisper.
+    - **Timeline:** Week 4
 
 **Product Questions:**
-1. [Do users prefer concise or detailed responses?]
-   - Method: [A/B test in Week 7]
-   - Timeline: Week 7-8
-
-2. [What error messages are most helpful?]
-   - Method: [User observation during testing]
-   - Timeline: Week 9
-
----
+1.  **Question:** Do students prefer more multiple-choice questions or more open-ended questions in their practice quizzes?
+    - **Method:** A/B test during user studies.
+    - **Timeline:** Week 7
 
 ### Experiments & Prototypes
 
-**Week 3-4: Proof of Concept**
-- Goal: [Can we get a basic query → LLM → response working?]
-- Success criteria: [End-to-end flow works with <5s latency]
-- What we'll learn: [Basic API integration, prompt patterns]
-
-**Week 5-6: Retrieval Integration**
-- Goal: [Add RAG with citations]
-- Success criteria: [Responses include relevant context 80% of time]
-- What we'll learn: [Chunking strategies, embedding quality]
-
-**Week 7-8: User Testing Round 1**
-- Goal: [Get feedback on core flow]
-- Success criteria: [3+ users complete test tasks]
-- What we'll learn: [UX pain points, feature priorities]
-
-**Week 11-12: Evaluation & Optimization**
-- Goal: [Reduce cost and latency]
-- Success criteria: [Hit target <$0.10 per query, <3s latency]
-- What we'll learn: Caching strategies, prompt optimization]
-
----
-
-### Literature & Resources
-
-**Key Papers/Articles to Review:**
-- [Paper 1 on RAG evaluation]
-- [Blog post on prompt engineering]
-- [Documentation on safety best practices]
-
-**Tutorials/Examples to Follow:**
-- [LangChain RAG tutorial]
-- [OpenAI cookbook example on function calling]
-- [FastAPI streaming example]
+- **Weeks 3-4: AI Core Proof-of-Concept:** Build standalone Python scripts for each AI feature to validate model choices and performance before building the API.
+- **Weeks 7-8: User Testing Round 1:** Test a prototype of the complete end-to-end workflow with 3-5 users to identify major UX flaws and validate the core value proposition.
 
 ---
 
@@ -451,181 +243,75 @@ Answer:
 ### Research Ethics
 
 **Do we need IRB approval?**
-- [ ] Yes - we're collecting sensitive data or working with minors
-- [x] No - but we've completed the IRB Light Checklist (see `docs/irb-checklist.md`)
+- [x] No - but we've completed the IRB Light Checklist. Our study collects anonymous usability feedback, does not involve sensitive data, and poses minimal risk to participants.
 
 **Data we'll collect:**
-- [Type of data, Task completion times, user feedback, screen recordings]
-- [How long we'll store it, Until end of semester, then delete]
-- [Who has access, Only team members]
+- Observer notes, anonymous survey responses on usefulness, task completion times.
+- Data will be stored in a team-shared, password-protected folder and deleted at the end of the semester.
 
 **User consent:**
-- [x] We've adapted the course consent template
-- [x] Users can withdraw at any time
-- [x] We've explained data usage clearly
-
----
-
-### Recruitment Plan
-
-**Target participants:**
-- Number: [5-8 users per testing round]
-- Criteria: [Must be students, no prior experience with similar tools]
-- Where we'll find them: [CS department, study groups, social media]
-
-**Compensation:**
-- [Coffee gift card, pizza, acknowledgment in final presentation]
-
-**Timeline:**
-- Week 3-4: Recruit first batch (3-5 users)
-- Week 7-8: User testing round 1
-- Week 11-12: User testing round 2
-- Week 14: Final feedback session
-
----
+- We have adapted the course consent template. Users will be informed that participation is voluntary and they can withdraw at any time.
 
 ### Testing Protocol
 
-**Session Structure (45-60 minutes):**
-
-1. **Introduction (5 min)**
-   - Explain study purpose
-   - Get consent
-   - Explain think-aloud protocol
-
-2. **Background Questions (5 min)**
-   - [Question about user's current workflow]
-   - [Question about pain points]
-   - [Question about expectations]
-
-3. **Task 1: [Specific task] (10 min)**
-   - Scenario: ["You need to find information about..."]
-   - Success: [User completes task with AI assistant]
-   - Observe: [Time, errors, confusion points]
-
-4. **Task 2: [Specific task] (10 min)**
-   - [Similar structure]
-
-5. **Task 3: [Specific task] (10 min)**
-   - [Similar structure]
-
-6. **Post-Task Questions (10 min)**
-   - What worked well?
-   - What was confusing?
-   - What would you change?
-   - Would you use this? Why/why not?
-   - Rate overall experience (1-5 scale)
-
-7. **Wrap-up (5 min)**
-   - Thank them
-   - Provide compensation
-   - Ask for follow-up permission
-
----
-
-### Data Collection Methods
-
-- [x] Screen recording (with permission)
-- [x] Observer notes
-- [x] Task completion metrics (time, success rate)
-- [x] Post-session survey
-- [x] System logs (latency, errors, costs)
-
-**Where data will be stored:**
-- Raw notes/recordings: [e.g., Password-protected Google Drive folder]
-- Analysis: [e.g., Anonymized summary in `docs/user-research/`]
-- No identifiable data in public repo
-
----
-
-### Analysis Plan
-
-**Quantitative:**
-- Task completion rate
-- Average time per task
-- Error rate
-- User satisfaction scores
-
-**Qualitative:**
-- Thematic analysis of user feedback
-- Identification of common pain points
-- Prioritization of improvements
-
-**Deliverables:**
-- User research summary (Week 8, Week 12)
-- Updated feature priority list
-- Input for final case study
+**Session Structure (30 minutes):**
+1.  **Introduction (5 min):** Explain the purpose and get consent.
+2.  **Task (20 min):** Provide the user with a 3-4 page PDF article and ask them to use Cognify to create a study guide they would use for an exam. We will observe using a "think-aloud" protocol.
+3.  **Debrief (5 min):** Ask follow-up questions about their experience and have them complete a short survey on usefulness.
 
 ---
 
 ## 8. Project Timeline & Milestones
 
 ### Weekly Breakdown
-
-| Week | Focus | Deliverables | Owner |
-|------|-------|-------------|-------|
-| 1 | Setup | Team formation, initial ideas | All |
-| 2 | Planning | **This proposal**, team contract, dev environment | All |
-| 3 | Core Flow | Basic query → LLM → response | [Name] |
-| 4 | Design Review | Architecture diagrams, eval plan | All |
-| 5 | Retrieval | RAG integration, Week 5 quiz | [Name] |
-| 6 | Function Calling | Add tool use, structured outputs | [Name] |
-| 7 | User Testing 1 | First user feedback round | All |
-| 8 | Iteration | Implement feedback, optimize | All |
-| 9 | **Midterm Exam** | Study week | All |
-| 10 | Optimization | Caching, batching, cost reduction | [Name] |
-| 11 | Safety Audit | Red teaming, bias testing | All |
-| 12 | Evaluation | Golden set, regression tests | [Name] |
-| 13 | Production | CI/CD, monitoring, portability | [Name] |
-| 14 | Polish | User testing round 2, final fixes | All |
-| 15 | **Final Demo** | Presentation, video, case study | All |
-
----
+| Week | Focus | Key Deliverable(s) |
+| :--- | :--- | :--- |
+| 2 | **Planning** | **This Proposal, Team Contract, Repo Setup** |
+| 3-4 | **Core Functionality** | Headless AI scripts work; basic end-to-end summarize feature |
+| 5-6 | **Full Feature Integration**| All AI features (Quiz, Glossary) and inputs (PDF, Audio) integrated |
+| 7-8 | **User Testing & Iteration**| Conduct first round of user testing; implement key feedback |
+| 9-10 | **Polish & UX** | Implement loading states, error handling, and session persistence |
+| 11-12| **Final Features** | Implement PDF export; conduct second round of user testing |
+| 13-14| **Final Polish & Deployment**| Final bug fixes, deploy to Vercel/Render, prepare demo |
+| 15 | **Final Demo** | Present the final project |
 
 ### Major Milestones
 
 **✅ Milestone 1: Proposal (Week 2)** - YOU ARE HERE
-- Submission: [10/16/2025]
-- Points: 10
+- **Submission:** October 24, 2025
+- **Points:** 10
 
 **🎯 Milestone 2: Design Review (Week 4)**
-- Submission: [Date]
-- Points: 5
-- What's due: Updated architecture, evaluation plan, backlog, token usage plan
+- **Submission:** November 7, 2025
+- **Points:** 5
+- **What's due:** Updated architecture, evaluation plan, backlog, token usage plan
 
 **🎯 Milestone 3: Safety & Evaluation Audit (Week 11)**
-- Submission: [Date]
-- Points: 3
-- What's due: Red team results, bias checks, golden set, error taxonomy, telemetry plan
+- **Submission:** January 9, 2026
+- **Points:** 3
+- **What's due:** Red team results, bias checks, golden set, error taxonomy, telemetry plan
 
 **🎯 Milestone 4: Final Demo (Week 15)**
-- Submission: [Date]
-- Points: 7
-- What's due: Working product, CI/CD, public README, demo video, case study
-
----
+- **Submission:** February 6, 2026
+- **Points:** 7
+- **What's due:** Working product, CI/CD, public README, demo video, case study
 
 ### Dependency Map
-
-**What must happen before what:**
-- ⚠️ Basic API integration (Week 3) blocks RAG (Week 5)
-- ⚠️ Core flow (Week 3) blocks user testing (Week 7)
-- ⚠️ Evaluation plan (Week 4) blocks golden set creation (Week 11)
-- ⚠️ Working product (Week 10) blocks user testing round 2 (Week 14)
-
----
+- ⚠️ Basic API integration (Week 4) blocks Full Feature Integration (Week 5).
+- ⚠️ A working core user flow (Week 6) is required before the first round of User Testing (Week 7).
+- ⚠️ The User Study Plan (Week 2) must be complete before recruiting users (Week 6).
 
 ### Backup Plan
 
 **If we fall behind, we'll cut (in this order):**
-1. [Secondary feature 1]
-2. [Nice-to-have feature 2]
-3. [Optimization work beyond basics]
+1.  **Audio File Input:** This is the most complex input type to process.
+2.  **Interactive Quiz Answer-Checking:** The feature will degrade to a simpler "Show Answer" button.
+3.  **PDF Export:** The core value is in the interactive web app; the export is a nice-to-have.
 
 **Core features we won't cut:**
-- [Essential feature 1]
-- [Essential feature 2]
-- [Essential feature 3]
+- Text and PDF input processing.
+- AI generation of Summaries, Quizzes, and Glossaries.
+- The core web interface for viewing and interacting with the results.
 
 ---
 
@@ -634,71 +320,41 @@ Answer:
 ### Cost Estimates
 
 **AI API Costs:**
-- Development & testing: [$50/month × 3 months = $150]
-- User testing: [$30 for ~300 test sessions]
-- Safety margin: [$50]
-- **Total AI costs: ~$230**
-
-**Other Services:**
-- [Vector DB hosting: $0 (free tier)]
-- [App hosting: $0 (free tier)]
-- [Domain name: $0 (use .vercel.app or .netlify.app)]
-
-**User compensation:**
-- [8 users × $10 gift card = $80]
-
-**TOTAL PROJECT COST: ~$310**
-
-**Who pays:**
-- [Split equally: ~$103 per team member]
-- OR [Apply for course/department funding]
-
----
+- The selected models (Distilbart, T5, Whisper) can all be run locally on a standard developer machine or on free-tier cloud services like Hugging Face Spaces or Google Colab. Therefore, we anticipate $0 in direct API or compute costs.
+- **Total AI costs: $0**
 
 ### Resource Constraints
 
 **Time:**
-- Total: ~15 weeks
-- Accounting for midterms, finals: ~12 effective weeks
-- Team capacity: [4] hours/week × [3] team members = [12] total hours
+- **Total:** ~15 weeks
+- **Accounting for midterms, finals:** ~12 effective weeks
+- **Team capacity:** ~5 hours/week × 3 team members = **15 total hours/week**
 
 **Compute:**
-- Development machines: [Laptops sufficient for most work]
-- GPU needs: [None - using cloud APIs]
-- Storage: [<1GB for database, fits free tier]
+- **Development machines:** Team laptops are sufficient for running the frontend, backend, and most AI models.
+- **GPU needs:** May be required for faster Whisper transcription. We will use free services like Google Colab for initial testing if needed.
 
 **Access:**
-- API keys: [Each team member has own OpenAI account]
-- Shared resources: [Team account for vector DB]
+- **API keys:** No paid API keys are required for the core V1.0 feature set. A Hugging Face account token may be needed and will be stored in the `.env` file.
 
 ---
 
 ## 10. Appendix
 
 ### Team Contract Summary
-
-[Brief 1-2 sentence summary linking to full contract]
-See [docs/team-contract.md](./team-contract.md) for full details.
-
----
+Our team contract outlines member roles (Frontend, Backend, AI Integration), communication protocols (Discord, twice-weekly meetings), and a conflict resolution process. See [docs/team-contract.md](./team-contract.md) for full details.
 
 ### References
-
-[List any papers, articles, or resources you referenced in this proposal]
-
-1. [Reference 1]
-2. [Reference 2]
-3. [Reference 3]
-
----
+- Hugging Face Transformers Documentation
+- FastAPI Documentation
+- React Documentation
+- OpenAI Whisper Paper/Repository
 
 ### Revision History
-
 | Date | Author | Changes |
 |------|--------|---------|
-| [10/16/2025] | [Beka Tkhilaishvili] | Initial draft |
-| [Date] | [Name] | Added architecture diagram |
-| [Date] | All | Final review and approval |
+| 10/21/2025 | Beka Tkhilaishvili | Initial draft of the capstone proposal |
+| 10/22/2025 | All | Team review, added budget, risks, and detailed timeline |
 
 ---
 

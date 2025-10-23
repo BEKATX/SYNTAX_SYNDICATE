@@ -304,7 +304,7 @@ If signing digitally, each team member should:
 3. Commit this file with a commit message: "Sign team contract - [Your Name]"
 
 - **[Beka Tkhilaishvili]** agreed on [10/16/2025]
-- **[Name]** agreed on [Date]
+- **[Aleksandre Pluzhnikovi]** agreed on [20/10/2025]
 - **[Name]** agreed on [Date]
 
 ---
