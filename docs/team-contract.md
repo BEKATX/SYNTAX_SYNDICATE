@@ -305,7 +305,7 @@ If signing digitally, each team member should:
 
 - **[Beka Tkhilaishvili]** agreed on [10/16/2025]
 - **[Aleksandre Pluzhnikovi]** agreed on [20/10/2025]
-- **[Name]** agreed on [Date]
+- **[Daviti Matiashvili]** agreed on [10/24/2025]
 
 ---
 
