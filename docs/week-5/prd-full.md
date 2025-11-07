@@ -58,13 +58,14 @@ MVP target: functional pipeline from upload → summary + quiz + glossary → do
 
 ```mermaid
 graph LR
-A[User] --> B[React SPA<br/>Upload PDF / Audio / Text]
-B --> C[FastAPI Backend (JWT Auth, Routing, Logging)]
-C --> D[Redis Worker – Async Tasks]
-D --> E[AI Core (LLMs, spaCy, Whisper)]
-E --> F[FAISS Index – Embeddings Store]
-E --> G[MinIO – User Uploads / Exports]
-C --> H[Postgres DB – Logs & Feedback]
+    A["User"] --> B["React SPA — Upload PDF / Audio / Text"]
+    B --> C["FastAPI Backend — JWT Auth, Routing, Logging"]
+    C --> D["Redis Worker — Async Tasks"]
+    D --> E["AI Core — LLMs, spaCy, Whisper"]
+    E --> F["FAISS Index — Embeddings Store"]
+    E --> G["MinIO — User Uploads / Exports"]
+    C --> H["Postgres DB — Logs & Feedback"]
+
 ```
 
 **Latency targets:**  
