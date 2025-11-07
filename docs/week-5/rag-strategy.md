@@ -43,14 +43,14 @@ Why:
 
 ```mermaid
 flowchart LR
-U[User Question] --> QEmbed[Embed Query]
-QEmbed --> VS[FAISS Vector Search (k=5)]
-VS -->|top-k| ReRank{Rerank?}
-ReRank -- yes --> XR[Cross-Encoder Rerank (k→m)]
-ReRank -- no --> Prompt
-XR --> Prompt[Prompt Builder (citations)]
-Prompt --> LLM[LLM (GPT-4o mini / GPT-4o)]
-LLM --> Resp[Answer + Citations]
+    U["User Question"] --> QEmbed["Embed Query"]
+    QEmbed --> VS["FAISS Vector Search — k = 5"]
+    VS -->|top-k| ReRank{"Rerank"}
+    ReRank -- Yes --> XR["Cross-Encoder Rerank — k to m"]
+    ReRank -- No --> Prompt["Prompt Builder — with citations"]
+    XR --> Prompt
+    Prompt --> LLM["LLM — GPT-4o mini / GPT-4o"]
+    LLM --> Resp["Answer + Citations"]
 ```
 
 ---
