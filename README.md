@@ -59,16 +59,6 @@ It takes your messy notes, dense readings, and long lectures and automatically t
 
 ### 🚀 Getting Started
 
-Follow the setup guide to run Cognify locally:
-
-git clone https://github.com/BEKATX/SYNTAX_SYNDICATE
-cd cognify
-cp .env.example .env   # add your OpenAI key & DB URL
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-npm install --prefix frontend
-uvicorn app.main:app --reload
-
 ➡️ **[Development Setup Guide](./docs/setup.md)**
 
 ### 👥 Team: Syntax Syndicate
