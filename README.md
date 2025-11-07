@@ -37,10 +37,10 @@ It takes your messy notes, dense readings, and long lectures and automatically t
 * Drafted **CLI tools** for indexing, reindexing, and evaluation metrics.
 
 #### 📁 Related Files
-- [`prd-full.md`](./prd-full.md) → Complete PRD & architecture.
-- [`functions-spec.md`](./functions-spec.md) → Function-level JSON schemas.
-- [`pydantic-models.py`](./pydantic-models.py) → Validated Pydantic models.
-- [`rag-strategy.md`](./rag-strategy.md) → RAG architecture, retrieval pipeline, evaluation metrics.
+- [`prd-full.md`](./docs/week-5/prd-full.md) → Complete PRD & architecture.
+- [`functions-spec.md`](./docs/week-5/functions-spec.md) → Function-level JSON schemas.
+- [`pydantic-models.py`](./docs/week-5/pydantic-models.py) → Validated Pydantic models.
+- [`rag-strategy.md`](./docs/week-5/rag-strategy.md) → RAG architecture, retrieval pipeline, evaluation metrics.
 
 ---
 
