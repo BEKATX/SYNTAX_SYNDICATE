@@ -1,0 +1,14 @@
+[2025-11-27 14:00:01] INFO: Starting Smoke Test Sequence for COGNIFY
+[2025-11-27 14:00:01] INFO: TEST 1: End-to-End Quiz Generation
+[2025-11-27 14:00:02] DEBUG: User Query: "Create a quiz about Photosynthesis"
+[2025-11-27 14:00:03] DEBUG: AI Tool Call detected: generate_study_quiz
+[2025-11-27 14:00:03] DEBUG: Arguments: {'topic': 'Photosynthesis', 'difficulty': 'medium', 'num_questions': 5}
+[2025-11-27 14:00:03] INFO: Function returned Pydantic Model (QuizResult)
+[2025-11-27 14:00:03] SUCCESS: TEST 1 PASSED. Latency: 1.8s. Cost: $0.0015
+
+[2025-11-27 14:00:04] INFO: TEST 2: Validation Error Check
+[2025-11-27 14:00:04] DEBUG: Input num_questions=20
+[2025-11-27 14:00:04] ERROR: Pydantic ValidationError caught: "Input should be less than or equal to 10"
+[2025-11-27 14:00:04] SUCCESS: TEST 2 PASSED (Error correctly caught).
+
+[2025-11-27 14:00:05] INFO: Smoke Test Complete. 2/2 Passed.
