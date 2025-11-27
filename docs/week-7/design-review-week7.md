@@ -1,10 +1,11 @@
 
+
 ### 3. The Design Review Document (The Big One)
 **File:** `docs/design-review-week7.md`
 
 This validates that your Week 6 functions actually work in the context of the larger system.
 
-```markdown
+
 # Design Review: Week 7
 **Team:** SYNTAX_SYNDICATE (Beka, Aleksandre, Daviti)  
 **Project:** COGNIFY  
