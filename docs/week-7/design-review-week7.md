@@ -1,4 +1,3 @@
----
 
 ### 3. The Design Review Document (The Big One)
 **File:** `docs/design-review-week7.md`
@@ -17,7 +16,6 @@ COGNIFY is currently a working prototype capable of taking topic inputs and gene
 **Current State:** Ready for Agent loop integration.
 **Critical Action:** We need to implement the actual PDF-to-Text parsing logic (currently using mock strings for smoke tests) to fully enable the end-to-end flow.
 
----
 
 ## 1. Architecture Validation
 *(See `docs/architecture-week7.png` for diagram)*
