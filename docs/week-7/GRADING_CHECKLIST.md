@@ -30,3 +30,20 @@
 ### README Update
 - [x] README links to design review
 - [x] README notes architectural changes: Shifted from RAG to Context Injection.
+
+## Part C: Week 8 - Production Safety (Path B)
+
+### Architecture Decision
+- [x] Documented in `docs/architecture-decision.md`
+- [x] Decision: **Direct Function Calling** (Path B)
+
+### Code Implementation
+- [x] `src/ai/production_caller.py` created
+- [x] Implemented Timeouts (15s limit)
+- [x] Implemented Retries (Tenacity exponential backoff)
+- [x] Implemented Cost Tracking ($0.50 limit)
+- [x] Implemented Audit Logging (JSON format)
+
+### Documentation & Tests
+- [x] `docs/function-safety.md` created
+- [x] `tests/test_function_safety.py` created (3 passing tests)
