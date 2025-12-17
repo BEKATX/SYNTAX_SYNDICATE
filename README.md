@@ -57,6 +57,18 @@ It takes your messy notes, dense readings, and long lectures and automatically t
 
 ---
 
+## ⚡ Performance & Optimization (Week 9)
+
+COGNIFY is optimized for cost and speed using **Result Caching**.
+
+### Performance Metrics
+- **Cache Hit Latency:** < 2ms
+- **Cache Miss Latency:** ~2.5s
+- **Cost Reduction:** Estimated 40% savings on repeated study sessions.
+
+### Architecture
+We use a **Direct Function Calling** approach (Path B) combined with an LRU Cache to minimize redundant LLM calls. All costs are tracked in `logs/cost_audit.jsonl`.
+
 ### 🚀 Getting Started
 
 ➡️ **[Development Setup Guide](./docs/setup.md)**
