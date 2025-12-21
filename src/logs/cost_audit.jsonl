@@ -1,0 +1,2 @@
+{"timestamp": "2025-12-21T19:37:03.757962", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 2529.85, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
+{"timestamp": "2025-12-21T19:39:12.336173", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 2737.68, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
