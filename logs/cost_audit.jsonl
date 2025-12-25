@@ -3,3 +3,4 @@
 {"timestamp": "2025-12-21T22:08:06.233391", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 8015.0, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
 {"timestamp": "2025-12-21T22:10:06.086920", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 6894.92, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
 {"timestamp": "2025-12-21T22:14:18.266488", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 3849.24, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
+{"timestamp": "2025-12-25T17:50:34.563729", "query_type": "generate_quiz", "model": "unknown", "latency_ms": 3901.91, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0, "status": "success"}
