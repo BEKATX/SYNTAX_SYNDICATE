@@ -1,18 +1,19 @@
 """
 Cognify FastAPI Application
-Main routes for integrating ProductionFunctionCaller (Week 10/11)
+Full Study Suite - Quiz, Summary, and Glossary Generation (Week 10/11)
 """
 
 import os
 import sys
 import json
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException, status, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
+import fitz  # PyMuPDF
 
 # Load environment variables first
 load_dotenv()
@@ -25,26 +26,35 @@ project_logs = project_root / "logs"
 src_logs.mkdir(exist_ok=True)
 project_logs.mkdir(exist_ok=True)
 
-# Add docs/week-9 paths for imports
-# production_caller.py expects to import from src.utils, so we need both paths
+# Add paths for imports - try src/ai first (newer version), then fallback to docs/week-9
+src_ai_path = Path(__file__).parent / "ai"
 week9_base = Path(__file__).parent.parent / "docs" / "week-9"
 week9_src = week9_base / "src"
-sys.path.insert(0, str(week9_src))  # For: from ai.production_caller import ...
-sys.path.insert(0, str(week9_base))  # For: from src.utils.cost_tracking import ... (inside production_caller)
 
-# Import ProductionFunctionCaller from the week-9 AI engine
-try:
+# Try to import from src/ai first (if it exists with providers)
+if (src_ai_path / "production_caller.py").exists():
+    sys.path.insert(0, str(Path(__file__).parent))
+    try:
+        from ai.production_caller import ProductionFunctionCaller
+        print("✅ Using ProductionFunctionCaller from src/ai/")
+    except ImportError:
+        # Fallback to docs/week-9 version
+        sys.path.insert(0, str(week9_src))
+        sys.path.insert(0, str(week9_base))
+        from ai.production_caller import ProductionFunctionCaller
+        print("✅ Using ProductionFunctionCaller from docs/week-9/src/ai/")
+else:
+    # Use docs/week-9 version
+    sys.path.insert(0, str(week9_src))
+    sys.path.insert(0, str(week9_base))
     from ai.production_caller import ProductionFunctionCaller
-except ImportError as e:
-    raise ImportError(
-        f"Failed to import ProductionFunctionCaller. Ensure docs/week-9/src/ai/production_caller.py exists. Error: {e}"
-    )
+    print("✅ Using ProductionFunctionCaller from docs/week-9/src/ai/")
 
 # Initialize FastAPI app
 app = FastAPI(
     title="Cognify API",
-    description="AI-Powered Study Assistant - Quiz Generation API",
-    version="1.0.0"
+    description="AI-Powered Study Assistant - Full Study Suite (Quiz, Summary, Glossary)",
+    version="2.0.0"
 )
 
 # CORS middleware for frontend integration
@@ -64,14 +74,15 @@ def get_ai_engine() -> ProductionFunctionCaller:
     """Get or create the AI engine instance."""
     global _ai_engine
     if _ai_engine is None:
-        # Verify GOOGLE_API_KEY is available
-        api_key = os.getenv("GOOGLE_API_KEY")
-        if not api_key:
+        # ProductionFunctionCaller now handles API key validation internally
+        # and has fallback to MockProvider if Gemini fails
+        try:
+            _ai_engine = ProductionFunctionCaller()
+        except Exception as e:
             raise ValueError(
-                "GOOGLE_API_KEY not found in environment variables. "
-                "Please set it in your .env file or production environment."
+                f"Failed to initialize AI engine: {str(e)}. "
+                "Please check your GOOGLE_API_KEY in .env file or production environment."
             )
-        _ai_engine = ProductionFunctionCaller()
     return _ai_engine
 
 
@@ -105,6 +116,49 @@ class QuizGenerationResponse(BaseModel):
     message: Optional[str] = None
 
 
+class SummaryGenerationRequest(BaseModel):
+    """Request model for summary generation."""
+    context_text: str = Field(..., description="The text content to summarize.")
+    topic: str = Field(..., description="The topic or subject of the content.")
+
+
+class SummaryGenerationResponse(BaseModel):
+    """Response model for summary generation."""
+    success: bool
+    topic: str
+    summary: str
+    message: Optional[str] = None
+
+
+class GlossaryGenerationRequest(BaseModel):
+    """Request model for glossary generation."""
+    context_text: str = Field(..., description="The text content to extract glossary terms from.")
+    topic: str = Field(..., description="The topic or subject of the content.")
+
+
+class GlossaryTerm(BaseModel):
+    """Single glossary term model."""
+    term: str
+    definition: str
+
+
+class GlossaryGenerationResponse(BaseModel):
+    """Response model for glossary generation."""
+    success: bool
+    topic: str
+    terms: List[GlossaryTerm]
+    total: int
+    message: Optional[str] = None
+
+
+class PDFUploadResponse(BaseModel):
+    """Response model for PDF upload."""
+    success: bool
+    extracted_text: str
+    page_count: int
+    message: Optional[str] = None
+
+
 # =====================================================
 # API Routes
 # =====================================================
@@ -113,9 +167,10 @@ class QuizGenerationResponse(BaseModel):
 async def root():
     """Root endpoint - health check."""
     return {
-        "message": "Cognify API - AI-Powered Study Assistant",
+        "message": "Cognify API - AI-Powered Study Assistant (Full Study Suite)",
         "status": "running",
-        "version": "1.0.0"
+        "version": "2.0.0",
+        "features": ["quiz", "summary", "glossary", "pdf_upload"]
     }
 
 
@@ -128,7 +183,8 @@ async def health_check():
         return {
             "status": "healthy",
             "ai_engine": "initialized",
-            "model": "gemini-flash-latest"
+            "model": "gemini-flash-latest (with fallback)",
+            "features": ["quiz", "summary", "glossary"]
         }
     except Exception as e:
         return {
@@ -259,6 +315,204 @@ async def generate_quiz(request: QuizGenerationRequest):
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error generating quiz: {str(e)}"
+        )
+
+
+@app.post("/api/generate-summary", response_model=SummaryGenerationResponse)
+async def generate_summary(request: SummaryGenerationRequest):
+    """
+    Generate a summary from the provided context text.
+    
+    This endpoint uses the ProductionFunctionCaller (Google Gemini Flash) to generate
+    a concise summary of the provided content.
+    """
+    try:
+        engine = get_ai_engine()
+        
+        result = engine.generate_summary(
+            context_text=request.context_text,
+            topic=request.topic
+        )
+        
+        if result is None:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to generate summary. AI engine returned None."
+            )
+        
+        summary_data = result.data
+        
+        # Extract summary text
+        if isinstance(summary_data, dict):
+            summary_text = summary_data.get('summary', '')
+            topic = summary_data.get('topic', request.topic)
+        else:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Unexpected response format from AI engine: {type(summary_data)}"
+            )
+        
+        if not summary_text:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="No summary found in AI response."
+            )
+        
+        return SummaryGenerationResponse(
+            success=True,
+            topic=topic,
+            summary=summary_text,
+            message="Summary generated successfully"
+        )
+        
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Configuration error: {str(e)}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error generating summary: {str(e)}"
+        )
+
+
+@app.post("/api/generate-glossary", response_model=GlossaryGenerationResponse)
+async def generate_glossary(request: GlossaryGenerationRequest):
+    """
+    Generate a glossary from the provided context text.
+    
+    This endpoint uses the ProductionFunctionCaller (Google Gemini Flash) to extract
+    key terms and definitions from the provided content.
+    """
+    try:
+        engine = get_ai_engine()
+        
+        result = engine.generate_glossary(
+            context_text=request.context_text,
+            topic=request.topic
+        )
+        
+        if result is None:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to generate glossary. AI engine returned None."
+            )
+        
+        glossary_data = result.data
+        
+        # Extract glossary terms
+        if isinstance(glossary_data, dict):
+            terms_data = glossary_data.get('terms', [])
+            topic = glossary_data.get('topic', request.topic)
+        elif isinstance(glossary_data, list):
+            terms_data = glossary_data
+            topic = request.topic
+        else:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Unexpected response format from AI engine: {type(glossary_data)}"
+            )
+        
+        # Transform terms to match our response model
+        terms = []
+        for term_item in terms_data:
+            if isinstance(term_item, dict):
+                terms.append(GlossaryTerm(
+                    term=term_item.get('term', ''),
+                    definition=term_item.get('definition', '')
+                ))
+            else:
+                # Handle object-like structures
+                terms.append(GlossaryTerm(
+                    term=getattr(term_item, 'term', ''),
+                    definition=getattr(term_item, 'definition', '')
+                ))
+        
+        if not terms:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="No terms found in AI response."
+            )
+        
+        return GlossaryGenerationResponse(
+            success=True,
+            topic=topic,
+            terms=terms,
+            total=len(terms),
+            message="Glossary generated successfully"
+        )
+        
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Configuration error: {str(e)}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error generating glossary: {str(e)}"
+        )
+
+
+@app.post("/api/upload-pdf", response_model=PDFUploadResponse)
+async def upload_pdf(file: UploadFile = File(...)):
+    """
+    Upload and extract text from a PDF file.
+    
+    This endpoint accepts a PDF file, extracts its text content using PyMuPDF,
+    and returns the extracted text for use with other endpoints.
+    """
+    try:
+        # Validate file type
+        if not file.filename.endswith('.pdf'):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="File must be a PDF (.pdf)"
+            )
+        
+        # Read file content
+        file_content = await file.read()
+        
+        # Extract text using PyMuPDF
+        try:
+            doc = fitz.open(stream=file_content, filetype="pdf")
+            extracted_text = ""
+            page_count = len(doc)
+            
+            for page_num in range(page_count):
+                page = doc[page_num]
+                extracted_text += page.get_text()
+                if page_num < page_count - 1:
+                    extracted_text += "\n\n"  # Add spacing between pages
+            
+            doc.close()
+            
+            if not extracted_text.strip():
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="PDF appears to be empty or contains no extractable text."
+                )
+            
+            return PDFUploadResponse(
+                success=True,
+                extracted_text=extracted_text,
+                page_count=page_count,
+                message=f"Successfully extracted text from {page_count} page(s)"
+            )
+            
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Error extracting text from PDF: {str(e)}"
+            )
+            
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error processing PDF upload: {str(e)}"
         )
 
 
