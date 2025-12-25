@@ -36,19 +36,19 @@ if (src_ai_path / "production_caller.py").exists():
     sys.path.insert(0, str(Path(__file__).parent))
     try:
         from ai.production_caller import ProductionFunctionCaller
-        print("✅ Using ProductionFunctionCaller from src/ai/")
+        print("[OK] Using ProductionFunctionCaller from src/ai/")
     except ImportError:
         # Fallback to docs/week-9 version
         sys.path.insert(0, str(week9_src))
         sys.path.insert(0, str(week9_base))
         from ai.production_caller import ProductionFunctionCaller
-        print("✅ Using ProductionFunctionCaller from docs/week-9/src/ai/")
+        print("[OK] Using ProductionFunctionCaller from docs/week-9/src/ai/")
 else:
     # Use docs/week-9 version
     sys.path.insert(0, str(week9_src))
     sys.path.insert(0, str(week9_base))
     from ai.production_caller import ProductionFunctionCaller
-    print("✅ Using ProductionFunctionCaller from docs/week-9/src/ai/")
+    print("[OK] Using ProductionFunctionCaller from docs/week-9/src/ai/")
 
 # Initialize FastAPI app
 app = FastAPI(
